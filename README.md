@@ -1,10 +1,8 @@
 # Distributed-System
 
 This template used for front end: (https://colorlib.com)
-
-Instructions to run web page locally:
-
-cd Distributed-System
+This webapp is built using the python-flask framework with SQLite running in the back-end. 
+The client interacts with the web UI to enter the information required to query about the climatic trends in different countries. This search query is also stored in the persistent database that does not get lost once the server restarts.
 
 To run the application:
 
