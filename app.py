@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 import sqlite3
 
-
+#test
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'abcd'
 
