@@ -50,8 +50,10 @@ def index():
             conn.commit()
             conn.close()
         elif SUBSCRIBE == 'Unsubscribe':
+            print(ID)
             conn = get_db_connection()
-            conn.execute("DELETE FROM climate WHERE (SUBSCRIBE = 'Subscribe') AND (TYPE = ID)")
+            sql = "DELETE FROM climate WHERE (ISO3 = ?) AND (TYPE = ?) AND (PHEN = ?)"
+            conn.execute( sql , (COUNTRY, ID, PHENOMENON))
             conn.commit()
             conn.close()
     return render_template('subscriber1.html')
@@ -59,29 +61,29 @@ def index():
 @app.route('/subscriber2', methods=('GET', 'POST'))
 def index2():
     if request.method == 'POST':
-        country = request.form['ISO3']
+        COUNTRY = request.form['ISO3']
         #PERIOD = request.form['PERIOD']
         ID = request.form['TYPE']
-        phenomenon = request.form['PHEN']
+        PHENOMENON = request.form['PHEN']
         SUBSCRIBE = request.form['SUBSCRIBE']
         #content = request.form['content']
 
 
         #write subscription logic here, add to db when we subscribe, remove from db when we unsubscribe
-        if not country:
+        if not COUNTRY:
             flash('Country code is required!')
         elif SUBSCRIBE == 'Subscribe':
             default_msg = "Nothing available at this time"
             conn = get_db_connection()
             conn.execute("INSERT INTO climate (TYPE, ISO3,PHEN,SUBSCRIBE,default_msg) VALUES (?,?, ?, ?, ?)",
-            (ID,country,phenomenon,SUBSCRIBE,default_msg)
+            (ID,COUNTRY,PHENOMENON,SUBSCRIBE,default_msg)
             )
             conn.commit()
             conn.close()
-        else:
+        elif SUBSCRIBE == 'Unsubscribe':
             conn = get_db_connection()
-            print(phenomenon)
-            conn.execute("DELETE FROM climate WHERE SUBSCRIBE = 'Subscribe' AND TYPE = ID AND PHEN = phenomenon AND ISO3 = country")
+            sql = "DELETE FROM climate WHERE (ISO3 = ?) AND (TYPE = ?) AND (PHEN = ?)"
+            conn.execute( sql , (COUNTRY, ID, PHENOMENON))
             conn.commit()
             conn.close()
     return render_template('subscriber2.html')
