@@ -2,7 +2,7 @@
     <h1>{% block title %} Previous Entries {% endblock %}</h1>
     {% for post in climate %}
         <a href="#">
-            <h3>COUNTRY: {{ post['ISO3'] }} | TIME PERIOD: {{ post['PERIOD'] }} | TYPE: {{ post['TYPE'] }} | PHENOMENON: {{ post['PHEN'] }}</h3> 
+            <h3>TYPE: {{ post['TYPE'] }} | COUNTRY: {{ post['ISO3'] }} | PHENOMENON: {{ post['PHEN'] }} | Information: {{ post['default_msg'] }}</h3> 
         </a>
         <hr>
     {% endfor %}

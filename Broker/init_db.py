@@ -8,8 +8,8 @@ with open('schema.sql') as f:
 
 cur = connection.cursor()
 
-cur.execute("INSERT INTO climate (ISO3, TYPE, PHEN) VALUES (?, ?, ?)",
-            ('India', 'sub-1', 'precipitation')
+cur.execute("INSERT INTO climate (TYPE, ISO3, PHEN, SUBSCRIBE, default_msg) VALUES (?, ?, ?, ?, ?)",
+            ('subscriber1', 'USA', 'Precipitation', 'Subscribe', 'Nothing available at this time')
             )
 
 #cur.execute("INSERT INTO posts (title, content) VALUES (?, ?)",

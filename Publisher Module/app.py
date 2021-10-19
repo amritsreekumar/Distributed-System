@@ -15,7 +15,7 @@ def display():
     return render_template('display.html', climate=climate)
 
 def get_db_connection():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('/Users/amritsreekumar/Desktop/Distributed-System/Broker/database.db') #link to the broker is here
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -23,7 +23,7 @@ def get_db_connection():
 def index():
     if request.method == 'POST':
         ISO3 = request.form['ISO3']
-        #PERIOD = request.form['PERIOD']
+        PERIOD = request.form['PERIOD']
         TYPE = request.form['TYPE']
         PHEN = request.form['PHEN']
         #content = request.form['content']
@@ -32,8 +32,8 @@ def index():
             flash('Country code is required!')
         else:
             conn = get_db_connection()
-            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?)",
-            (ISO3,TYPE,PHEN)
+            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?, ?)",
+            (ISO3,PERIOD,TYPE,PHEN)
             )
             conn.commit()
             conn.close()
@@ -45,7 +45,7 @@ def index():
 def index2():
     if request.method == 'POST':
         ISO3 = request.form['ISO3']
-        #PERIOD = request.form['PERIOD']
+        PERIOD = request.form['PERIOD']
         TYPE = request.form['TYPE']
         PHEN = request.form['PHEN']
         #content = request.form['content']
@@ -54,8 +54,8 @@ def index2():
             flash('Country code is required!')
         else:
             conn = get_db_connection()
-            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?)",
-            (ISO3,TYPE,PHEN)
+            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?, ?)",
+            (ISO3,PERIOD,TYPE,PHEN)
             )
             conn.commit()
             conn.close()
