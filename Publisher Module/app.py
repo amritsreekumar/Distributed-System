@@ -22,68 +22,101 @@ def get_db_connection():
 @app.route('/publisher1', methods=('GET', 'POST'))
 def index():
     if request.method == 'POST':
-        ISO3 = request.form['ISO3']
+        #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
-        TYPE = request.form['TYPE']
+        #TYPE = request.form['TYPE']
         PHEN = request.form['PHEN']
+        ADVERTISE = request.form['ADV']
         #content = request.form['content']
 
-        if not ISO3:
-            flash('Country code is required!')
+        if PHEN == 'Temperature':
+            phenomenon = 'tas'
         else:
+            phenomenon = 'pr'
+        urlnew = ''
+        if ADVERTISE == 'Advertise':
+            urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
             conn = get_db_connection()
-            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?, ?)",
-            (ISO3,PERIOD,TYPE,PHEN)
-            )
+            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+            conn.execute(sql, (urlnew, PHEN))
             conn.commit()
             conn.close()
-            return redirect(url_for('publisher1'))
-
+        elif ADVERTISE == 'Publish':
+            start = PERIOD.split('-')[0]
+            end = PERIOD.split('-')[1]
+            urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
+            conn = get_db_connection()
+            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+            conn.execute(sql, (urlnew, PHEN))
+            conn.commit()
+            conn.close()
     return render_template('publisher1.html')
 
 @app.route('/publisher2', methods=('GET', 'POST'))
 def index2():
     if request.method == 'POST':
-        ISO3 = request.form['ISO3']
+        #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
-        TYPE = request.form['TYPE']
+        #TYPE = request.form['TYPE']
         PHEN = request.form['PHEN']
+        ADVERTISE = request.form['ADV']
         #content = request.form['content']
 
-        if not ISO3:
-            flash('Country code is required!')
+        if PHEN == 'Temperature':
+            phenomenon = 'tas'
         else:
+            phenomenon = 'pr'
+        urlnew = ''
+        if ADVERTISE == 'Advertise':
+            urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
             conn = get_db_connection()
-            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?, ?)",
-            (ISO3,PERIOD,TYPE,PHEN)
-            )
+            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'CAN') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+            conn.execute(sql, (urlnew, PHEN))
             conn.commit()
             conn.close()
-            return redirect(url_for('publisher2'))
-
+        elif ADVERTISE == 'Publish':
+            start = PERIOD.split('-')[0]
+            end = PERIOD.split('-')[1]
+            urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
+            conn = get_db_connection()
+            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'CAN') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+            conn.execute(sql, (urlnew, PHEN))
+            conn.commit()
+            conn.close()
     return render_template('publisher2.html')
 
 
 @app.route('/publisher3', methods=('GET', 'POST'))
 def index3():
     if request.method == 'POST':
-        ISO3 = request.form['ISO3']
-        #PERIOD = request.form['PERIOD']
-        TYPE = request.form['TYPE']
+        #ISO3 = request.form['ISO3']
+        PERIOD = request.form['PERIOD']
+        #TYPE = request.form['TYPE']
         PHEN = request.form['PHEN']
+        ADVERTISE = request.form['ADV']
         #content = request.form['content']
 
-        if not ISO3:
-            flash('Country code is required!')
+        if PHEN == 'Temperature':
+            phenomenon = 'tas'
         else:
+            phenomenon = 'pr'
+        urlnew = ''
+        if ADVERTISE == 'Advertise':
+            urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
             conn = get_db_connection()
-            conn.execute("INSERT INTO climate (ISO3,PERIOD,TYPE,PHEN) VALUES (?, ?, ?)",
-            (ISO3,TYPE,PHEN)
-            )
+            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'MEX') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+            conn.execute(sql, (urlnew, PHEN))
             conn.commit()
             conn.close()
-            return redirect(url_for('publisher3'))
-
+        elif ADVERTISE == 'Publish':
+            start = PERIOD.split('-')[0]
+            end = PERIOD.split('-')[1]
+            urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
+            conn = get_db_connection()
+            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'MEX') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+            conn.execute(sql, (urlnew, PHEN))
+            conn.commit()
+            conn.close()
     return render_template('publisher3.html')
 
 if __name__ == "__main__":
