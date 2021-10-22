@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 import sqlite3
+import os
 
 #test
 app = Flask(__name__)
@@ -23,7 +24,9 @@ def displaysubscriber2():
     return render_template('displaysubscriber2.html', climate=climate)
 
 def get_db_connection():
-    conn = sqlite3.connect('/Users/amritsreekumar/Desktop/Distributed-System/Broker/database.db') #link to the broker is here
+    # link to the broker is here
+    # print(os.getcwd())
+    conn = sqlite3.connect('./data/database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -89,4 +92,4 @@ def index2():
     return render_template('subscriber2.html')
 
 if __name__ == "__main__":
-    app.run(host ='0.0.0.0', port = 5001, debug = True) 
+    app.run(host ='0.0.0.0', port = 5002, debug = True)

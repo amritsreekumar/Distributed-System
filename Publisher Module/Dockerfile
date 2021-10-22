@@ -3,13 +3,17 @@ from alpine:3.11
 RUN apk add --no-cache python3-dev \
     && pip3 install --upgrade pip
 
+# VOLUME /weather
+
 WORKDIR /app
 
 COPY . /app
 
+
+
 RUN pip3 --no-cache-dir install -r requirements.txt
 
-EXPOSE 5002
+EXPOSE 5001
 
 ENTRYPOINT  ["python3"]
 
