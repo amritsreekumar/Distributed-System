@@ -36,6 +36,7 @@ def index():
         else:
             phenomenon = 'pr'
         urlnew = ''
+        #advertise function
         if ADVERTISE == 'Advertise':
             urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
             conn = get_db_connection()
@@ -43,6 +44,7 @@ def index():
             conn.execute(sql, (urlnew, PHEN))
             conn.commit()
             conn.close()
+        #publish function
         elif ADVERTISE == 'Publish':
             start = PERIOD.split('-')[0]
             end = PERIOD.split('-')[1]
@@ -69,6 +71,7 @@ def index2():
         else:
             phenomenon = 'pr'
         urlnew = ''
+        #advertise function
         if ADVERTISE == 'Advertise':
             urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
             conn = get_db_connection()
@@ -76,6 +79,7 @@ def index2():
             conn.execute(sql, (urlnew, PHEN))
             conn.commit()
             conn.close()
+        #publish function
         elif ADVERTISE == 'Publish':
             start = PERIOD.split('-')[0]
             end = PERIOD.split('-')[1]
@@ -103,6 +107,8 @@ def index3():
         else:
             phenomenon = 'pr'
         urlnew = ''
+
+        #Advertise function
         if ADVERTISE == 'Advertise':
             urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
             conn = get_db_connection()
@@ -110,6 +116,8 @@ def index3():
             conn.execute(sql, (urlnew, PHEN))
             conn.commit()
             conn.close()
+
+        #publish function
         elif ADVERTISE == 'Publish':
             start = PERIOD.split('-')[0]
             end = PERIOD.split('-')[1]

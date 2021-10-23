@@ -44,6 +44,7 @@ def index():
         #write subscription logic here, add to db when we subscribe, remove from db when we unsubscribe
         if not COUNTRY:
             flash('Country code is required!')
+        #subscribe function
         elif SUBSCRIBE == 'Subscribe':
             default_msg = "Nothing available at this time"
             conn = get_db_connection()
@@ -52,6 +53,7 @@ def index():
             )
             conn.commit()
             conn.close()
+        #unsubscribe function
         elif SUBSCRIBE == 'Unsubscribe':
             print(ID)
             conn = get_db_connection()
@@ -75,6 +77,7 @@ def index2():
         #write subscription logic here, add to db when we subscribe, remove from db when we unsubscribe
         if not COUNTRY:
             flash('Country code is required!')
+        #subscribe function
         elif SUBSCRIBE == 'Subscribe':
             default_msg = "Nothing available at this time"
             conn = get_db_connection()
@@ -83,6 +86,7 @@ def index2():
             )
             conn.commit()
             conn.close()
+        #unsubscribe function
         elif SUBSCRIBE == 'Unsubscribe':
             conn = get_db_connection()
             sql = "DELETE FROM climate WHERE (ISO3 = ?) AND (TYPE = ?) AND (PHEN = ?)"
