@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 import sqlite3
 import os
+from Broker.pubsub import subscriberfunction
 
 #test
 app = Flask(__name__)
@@ -40,27 +41,27 @@ def index():
         SUBSCRIBE = request.form['SUBSCRIBE']
         #content = request.form['content']
 
-
+        subscriberfunction(COUNTRY, ID, PHENOMENON, SUBSCRIBE)
         #write subscription logic here, add to db when we subscribe, remove from db when we unsubscribe
-        if not COUNTRY:
-            flash('Country code is required!')
-        #subscribe function
-        elif SUBSCRIBE == 'Subscribe':
-            default_msg = "Nothing available at this time"
-            conn = get_db_connection()
-            conn.execute("INSERT INTO climate (TYPE, ISO3,PHEN,SUBSCRIBE,default_msg) VALUES (?,?, ?, ?, ?)",
-            (ID,COUNTRY,PHENOMENON,SUBSCRIBE,default_msg)
-            )
-            conn.commit()
-            conn.close()
-        #unsubscribe function
-        elif SUBSCRIBE == 'Unsubscribe':
-            print(ID)
-            conn = get_db_connection()
-            sql = "DELETE FROM climate WHERE (ISO3 = ?) AND (TYPE = ?) AND (PHEN = ?)"
-            conn.execute( sql , (COUNTRY, ID, PHENOMENON))
-            conn.commit()
-            conn.close()
+        # if not COUNTRY:
+        #     flash('Country code is required!')
+        # #subscribe function
+        # elif SUBSCRIBE == 'Subscribe':
+        #     default_msg = "Nothing available at this time"
+        #     conn = get_db_connection()
+        #     conn.execute("INSERT INTO climate (TYPE, ISO3,PHEN,SUBSCRIBE,default_msg) VALUES (?,?, ?, ?, ?)",
+        #     (ID,COUNTRY,PHENOMENON,SUBSCRIBE,default_msg)
+        #     )
+        #     conn.commit()
+        #     conn.close()
+        # #unsubscribe function
+        # elif SUBSCRIBE == 'Unsubscribe':
+        #     print(ID)
+        #     conn = get_db_connection()
+        #     sql = "DELETE FROM climate WHERE (ISO3 = ?) AND (TYPE = ?) AND (PHEN = ?)"
+        #     conn.execute( sql , (COUNTRY, ID, PHENOMENON))
+        #     conn.commit()
+        #     conn.close()
     return render_template('subscriber1.html')
 
 @app.route('/subscriber2', methods=('GET', 'POST'))

@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 import sqlite3
 import os
+import Broker
+from Broker.pubsub import publisherfunction
 
 #test
 app = Flask(__name__)
@@ -31,29 +33,30 @@ def index():
         ADVERTISE = request.form['ADV']
         #content = request.form['content']
 
-        if PHEN == 'Temperature':
-            phenomenon = 'tas'
-        else:
-            phenomenon = 'pr'
-        urlnew = ''
-        #advertise function
-        if ADVERTISE == 'Advertise':
-            urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
-            conn = get_db_connection()
-            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-            conn.execute(sql, (urlnew, PHEN))
-            conn.commit()
-            conn.close()
-        #publish function
-        elif ADVERTISE == 'Publish':
-            start = PERIOD.split('-')[0]
-            end = PERIOD.split('-')[1]
-            urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
-            conn = get_db_connection()
-            sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-            conn.execute(sql, (urlnew, PHEN))
-            conn.commit()
-            conn.close()
+        publisherfunction(PERIOD, PHEN, ADVERTISE) #send the message here
+        # if PHEN == 'Temperature':
+        #     phenomenon = 'tas'
+        # else:
+        #     phenomenon = 'pr'
+        # urlnew = ''
+        # #advertise function
+        # if ADVERTISE == 'Advertise':
+        #     urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
+        #     conn = get_db_connection()
+        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        #     conn.execute(sql, (urlnew, PHEN))
+        #     conn.commit()
+        #     conn.close()
+        # #publish function
+        # elif ADVERTISE == 'Publish':
+        #     start = PERIOD.split('-')[0]
+        #     end = PERIOD.split('-')[1]
+        #     urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
+        #     conn = get_db_connection()
+        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        #     conn.execute(sql, (urlnew, PHEN))
+        #     conn.commit()
+        #     conn.close()
     return render_template('publisher1.html')
 
 @app.route('/publisher2', methods=('GET', 'POST'))
