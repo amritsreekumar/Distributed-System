@@ -6,12 +6,40 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'abcd'
 
-@app.route('/display', methods=('GET', 'POST'))
-def display():
-    conn = get_db_connection()
+#topics and subscribers handled by this broker 1
+topics = ["CAN/tas", "USA/tas", "MEX/tas", "IND/tas"]
+subscribers = ["subscriber1", "subscriber2", "subscriber3", "subscriber4"]
+
+
+period = ""
+phen = ""
+advertise = ""
+country = ""
+
+
+@app.route('/displaypublisher', methods=('GET', 'POST'))
+def displaypublisher():
+    conn = get_db_connection(period, phen,advertise,country) #take this from post
     climate = conn.execute('SELECT * FROM climate').fetchall()
     conn.close()
     return render_template('messagereceiver.html', climate=climate)
+
+@app.route('/displaysubscriber', methods=('GET', 'POST'))
+def displaysubscriber(period, phen,advertise,country):
+    conn = get_db_connection()
+    climate = conn.execute('SELECT * FROM climate').fetchall()
+    conn.close()
+
+    topic = country + "/" + phen
+    #to check if the topics are present
+    if topic not in topics:
+        to_next_broker(period, phen,advertise,country)
+    else:
+        subscriberfunction(period, phen,advertise,country)
+
+
+    return render_template('messagereceiver.html', climate=climate)
+
 
 def get_db_connection():
     # print(os.getcwd())
@@ -19,7 +47,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-def publisherfunction(period, phen, advertise):
+def publisherfunction(period, phen, advertise, country):
     if phen == 'Temperature':
         phenomenon = 'tas'
     else:
@@ -29,8 +57,8 @@ def publisherfunction(period, phen, advertise):
     if advertise == 'Advertise':
         urlnew = urlnew + 'UPCOMING phenomenon: ' + phen + ' in the period: ' + period
         conn = get_db_connection()
-        sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'CAN') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        conn.execute(sql, (urlnew, phen))
+        sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        conn.execute(sql, (urlnew, country, phen))
         conn.commit()
         conn.close()
     #publish function
@@ -39,8 +67,8 @@ def publisherfunction(period, phen, advertise):
         end = period.split('-')[1]
         urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
         conn = get_db_connection()
-        sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'CAN') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        conn.execute(sql, (urlnew, phen))
+        sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        conn.execute(sql, (urlnew, country, phen))
         conn.commit()
         conn.close()
 
@@ -66,6 +94,12 @@ def subscriberfunction(country, id, phen, subscribe):
         conn.close()
 
 
+def to_next_broker(period, phen,advertise,country):
+    #send message to broker2 only for subscriber
+    return
+
+def from_last_broker(period, phen,advertise,country):
+    displaysubscriber(period, phen,advertise,country)
 
 if __name__ == "__main__":
     app.run(host ='0.0.0.0', port = 5003, debug = True)
