@@ -7,8 +7,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'abcd'
 
 #topics and subscribers handled by this broker 1
-topics = ["CAN/tas", "USA/tas", "MEX/tas", "IND/tas"]
-subscribers = ["subscriber1", "subscriber2", "subscriber3", "subscriber4"]
+topics = ["IOT/tas", "TCD/tas", "COL/tas", "CYP/tas"]
+subscribers = ["subscriber9", "subscriber10", "subscriber11", "subscriber12"]
 
 
 period = ""
