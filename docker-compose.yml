@@ -1,0 +1,46 @@
+version: "3.7"
+volumes:
+  weather:
+    external: true
+services:
+  # network_mode: host
+  broker:
+    build: ./Broker
+    container_name: broker
+    # network_mode: host
+    ports: 
+      - "5000:5000"
+    volumes:
+      - weather:/app/data
+
+  pub:
+    build: ./Publisher_Module
+    container_name: pub
+    # network_mode: host
+    ports: 
+      - "5001:5000"
+  sub:
+    build: ./Subscriber_Module
+    container_name: sub
+    # network_mode: host
+    ports: 
+      - "5002:5000"
+  broker2:
+    build: ./Broker_2
+    container_name: broker2
+    # network_mode: host
+    ports: 
+      - "5003:5000"
+    volumes:
+      - weather:/app/data
+  broker3:
+    build: ./Broker_3
+    container_name: broker3
+    # network_mode: host
+    ports: 
+      - "5004:5000"
+    volumes:
+      - weather:/app/data
+
+  
+
