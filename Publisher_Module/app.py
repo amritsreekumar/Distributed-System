@@ -126,7 +126,7 @@ def publisher4():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'IND'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -146,7 +146,7 @@ def publisher5():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'AFG'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -190,7 +190,7 @@ def publisher6():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'ALB'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -209,7 +209,7 @@ def publisher7():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'BGR'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -228,7 +228,7 @@ def publisher8():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'CMR'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -247,7 +247,7 @@ def publisher9():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'IOT'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -266,7 +266,7 @@ def publisher10():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'TCD'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -285,7 +285,7 @@ def publisher11():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'COL'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
@@ -304,7 +304,7 @@ def publisher12():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'CYP'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
         app.logger.info(data)
