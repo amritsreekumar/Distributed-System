@@ -11,15 +11,18 @@ In order for the brokers to share the same db, we have made use of docker volume
 **Docker Volume**
     docker volume create weather
 
-**Copy the broker db file to volume , cd to Broker/**
-
+**Copy the broker db file to volume**
+    cd Broker/
     docker run -v weather:/data --name helper busybox true
     docker cp . helper:/data
     docker rm helper
 
 To start the dockers, we have written a docker compose file, so that the 3 brokers and publisher and subscriber dockers starts with just one line of code
+
+
 To build the docker
 
+    cd ..
     docker-compose build
 
 To compose the docker
@@ -32,8 +35,9 @@ Example links:
         
         http://localhost:5002/subscriber1 (Just one example for subscriber1, it can be changed to subscriber1-subscriber12)
 
+
 Type in the country name and choose the required options as per the drop down.
 
 Hit submit
 
-Scroll down to find the previously queried searches and it will have the searches stored in the database. 
+Scroll down to find the previously queried searches and it will have the searches stored in the database along with the published data as per the subscription. 
