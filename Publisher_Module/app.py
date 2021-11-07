@@ -25,7 +25,7 @@ def get_db_connection():
     return conn
 
 @app.route('/publisher1', methods=('GET', 'POST'))
-def index():
+def publisher1():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -33,42 +33,20 @@ def index():
         PHEN = request.form['PHEN']
         ADVERTISE = request.form['ADV']
         COUNTRY = 'USA'
+        PUB_SUB_ID = "PUB"
+        subscribe_id = "0"
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
-                'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
+                'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID, "subscribe_id": subscribe_id}
         app.logger.info(data)
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         r = requests.post(url, data=json.dumps(data), headers=headers)
-        # print(r.status_code)
-        # publisherfunction(PERIOD, PHEN, ADVERTISE) #send the message here
-        # if PHEN == 'Temperature':
-        #     phenomenon = 'tas'
-        # else:
-        #     phenomenon = 'pr'
-        # urlnew = ''
-        # #advertise function
-        # if ADVERTISE == 'Advertise':
-        #     urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
-        #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        #     conn.execute(sql, (urlnew, PHEN))
-        #     conn.commit()
-        #     conn.close()
-        # #publish function
-        # elif ADVERTISE == 'Publish':
-        #     start = PERIOD.split('-')[0]
-        #     end = PERIOD.split('-')[1]
-        #     urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
-        #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        #     conn.execute(sql, (urlnew, PHEN))
-        #     conn.commit()
-        #     conn.close()
+  
     return render_template('publisher1.html')
 
 @app.route('/publisher2', methods=('GET', 'POST'))
-def index2():
+def publisher2():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -77,14 +55,16 @@ def index2():
         ADVERTISE = request.form['ADV']
         COUNTRY = 'CAN'
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        PUB_SUB_ID = "PUB"
+        subscribe_id = "0"
+        #content = request.form['content']
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
-                'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
+                'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID, "subscribe_id": subscribe_id}
         app.logger.info(data)
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         r = requests.post(url, data=json.dumps(data), headers=headers)
-        # print(r.status_code)
-        # publisherfunction(PERIOD, PHEN, ADVERTISE) #send the message here
+
         # if PHEN == 'Temperature':
         #     phenomenon = 'tas'
         # else:
@@ -94,7 +74,7 @@ def index2():
         # if ADVERTISE == 'Advertise':
         #     urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
         #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'CAN') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
         #     conn.execute(sql, (urlnew, PHEN))
         #     conn.commit()
         #     conn.close()
@@ -104,58 +84,40 @@ def index2():
         #     end = PERIOD.split('-')[1]
         #     urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
         #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'CAN') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
         #     conn.execute(sql, (urlnew, PHEN))
         #     conn.commit()
         #     conn.close()
+
     return render_template('publisher2.html')
 
 
 @app.route('/publisher3', methods=('GET', 'POST'))
-def index3():
+def publisher3():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
         #TYPE = request.form['TYPE']
         PHEN = request.form['PHEN']
         ADVERTISE = request.form['ADV']
-        COUNTRY = 'MEX'
+
         #content = request.form['content']
-        url = "http://broker:5000/display"
+        COUNTRY = 'MEX'
+        PUB_SUB_ID = "PUB"
+        subscribe_id = "0"
+        #content = request.form['content']
+        url = "http://broker:5000/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
-                'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY}
+                'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID, "subscribe_id": subscribe_id}
         app.logger.info(data)
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         r = requests.post(url, data=json.dumps(data), headers=headers)
-        # print(r.status_code)
-        # publisherfunction(PERIOD, PHEN, ADVERTISE) #send the message here
-        # if PHEN == 'Temperature':
-        #     phenomenon = 'tas'
-        # else:
-        #     phenomenon = 'pr'
-        # urlnew = ''
-        # #advertise function
-        # if ADVERTISE == 'Advertise':
-        #     urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
-        #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        #     conn.execute(sql, (urlnew, PHEN))
-        #     conn.commit()
-        #     conn.close()
-        # #publish function
-        # elif ADVERTISE == 'Publish':
-        #     start = PERIOD.split('-')[0]
-        #     end = PERIOD.split('-')[1]
-        #     urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
-        #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        #     conn.execute(sql, (urlnew, PHEN))
-        #     conn.commit()
-        #     conn.close()
     return render_template('publisher3.html')
 
+
+
 @app.route('/publisher4', methods=('GET', 'POST'))
-def index4():
+def publisher4():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -170,36 +132,12 @@ def index4():
         app.logger.info(data)
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         r = requests.post(url, data=json.dumps(data), headers=headers)
-        # print(r.status_code)
-        # publisherfunction(PERIOD, PHEN, ADVERTISE) #send the message here
-        # if PHEN == 'Temperature':
-        #     phenomenon = 'tas'
-        # else:
-        #     phenomenon = 'pr'
-        # urlnew = ''
-        # #advertise function
-        # if ADVERTISE == 'Advertise':
-        #     urlnew = urlnew + 'UPCOMING phenomenon: ' + PHEN + ' in the period: ' + PERIOD
-        #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        #     conn.execute(sql, (urlnew, PHEN))
-        #     conn.commit()
-        #     conn.close()
-        # #publish function
-        # elif ADVERTISE == 'Publish':
-        #     start = PERIOD.split('-')[0]
-        #     end = PERIOD.split('-')[1]
-        #     urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + phenomenon + '/' + start + '/' + end + '/' + 'USA'
-        #     conn = get_db_connection()
-        #     sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = 'USA') OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        #     conn.execute(sql, (urlnew, PHEN))
-        #     conn.commit()
-        #     conn.close()
+ 
     return render_template('publisher4.html')
 
 
 @app.route('/publisher5', methods=('GET', 'POST'))
-def index5():
+def publisher5():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -241,8 +179,9 @@ def index5():
         #     conn.close()
     return render_template('publisher5.html')
 
+
 @app.route('/publisher6', methods=('GET', 'POST'))
-def index6():
+def publisher6():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -259,8 +198,9 @@ def index6():
         r = requests.post(url, data=json.dumps(data), headers=headers)
     return render_template('publisher6.html')
 
+
 @app.route('/publisher7', methods=('GET', 'POST'))
-def index7():
+def publisher7():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -279,7 +219,7 @@ def index7():
 
 
 @app.route('/publisher8', methods=('GET', 'POST'))
-def index8():
+def publisher8():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -298,7 +238,7 @@ def index8():
 
 
 @app.route('/publisher9', methods=('GET', 'POST'))
-def index9():
+def publisher9():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -317,7 +257,7 @@ def index9():
 
 
 @app.route('/publisher10', methods=('GET', 'POST'))
-def index10():
+def publisher10():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -336,7 +276,7 @@ def index10():
 
 
 @app.route('/publisher11', methods=('GET', 'POST'))
-def index11():
+def publisher11():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -355,7 +295,7 @@ def index11():
 
 
 @app.route('/publisher12', methods=('GET', 'POST'))
-def index12():
+def publisher12():
     if request.method == 'POST':
         #ISO3 = request.form['ISO3']
         PERIOD = request.form['PERIOD']
@@ -371,7 +311,6 @@ def index12():
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         r = requests.post(url, data=json.dumps(data), headers=headers)
     return render_template('publisher12.html')
-
 
 
 if __name__ == "__main__":
