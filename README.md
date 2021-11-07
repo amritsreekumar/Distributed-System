@@ -7,11 +7,6 @@ This search query is also stored in the persistent database that does not get lo
 
 To run the application:
 
-Change to the working directory
-
-http://localhost:5001/publisher1
-http://localhost:5002/subscriber1
-
 In order for the brokers to share the same db, we have made use of docker volume and its, attached with just the brokers.
 **Docker Volume**
     docker volume create weather
