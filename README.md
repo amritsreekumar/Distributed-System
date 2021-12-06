@@ -42,6 +42,8 @@ Hit submit
 
 Scroll down to find the previously queried searches and it will have the searches stored in the database along with the published data as per the subscription. 
 
+
+pip3 install kafka-python
 brew install kafka
 brew install zookeeper
 
@@ -63,4 +65,4 @@ kafka-console-producer --broker-list localhost:9092 --topic test-topic
 kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --from-beginning
 
 
-
+Kafka-server-start /usr/local/etc/Kafka/server.properties
