@@ -41,3 +41,26 @@ Type in the country name and choose the required options as per the drop down.
 Hit submit
 
 Scroll down to find the previously queried searches and it will have the searches stored in the database along with the published data as per the subscription. 
+
+brew install kafka
+brew install zookeeper
+
+To start zookeeper now and restart at login:
+  brew services start zookeeper
+Or, if you don't want/need a background service you can just run:
+  zkServer start
+
+To restart kafka after an upgrade:
+  brew services restart kafka
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/kafka/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
+
+
+kafka-topics --create --topic test-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4 
+
+kafka-console-producer --broker-list localhost:9092 --topic test-topic
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --from-beginning
+
+
+

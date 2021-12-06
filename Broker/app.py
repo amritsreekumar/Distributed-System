@@ -2,14 +2,33 @@ import json
 from flask import Flask, render_template, request, url_for, flash, redirect
 import flask
 from werkzeug.exceptions import abort
+from time import sleep
+from json import dumps
+from kafka import KafkaProducer
+from kafka import KafkaConsumer
+from json import loads
 import sqlite3
 import os
 import logging
 import jsonify
 import requests
 
-topics = ["IOT/tas", "TCD/tas", "COL/tas", "CYP/tas"]
-subscribers = ["subscriber9", "subscriber10", "subscriber11", "subscriber12"]
+topics = ["USA/tas", "CAN/tas", "MEX/tas"]
+subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8" "subscriber9", "subscriber10"]
+
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
+                         value_serializer=lambda x: 
+                         dumps(x).encode('utf-8'))
+
+subdict = {}
+for i in subscribers:
+    subdict[i] = KafkaConsumer(
+     bootstrap_servers=['localhost:9092'],
+     auto_offset_reset='earliest',
+     enable_auto_commit=True,
+     group_id='my-group',
+     value_deserializer=lambda x: loads(x.decode('utf-8')))
+
 
 app = Flask(__name__)
 
@@ -41,7 +60,7 @@ def pub():
     json_data = flask.request.json
     app.logger.info(json_data)
     publisherfunction(json_data)
-    climate = conn.execute('SELECT * FROM climate').fetchall()
+    #climate = conn.execute('SELECT * FROM climate').fetchall()
     # print(json_data)
     conn.close()
     # return json_data.text
@@ -59,13 +78,15 @@ def sub():
     subscribe = json_data['SUBSCRIBE']
 
     topic = country + "/" + phen
-    if topic not in topics:
-        to_next_broker(json_data)
-    else:
-        subscriberfunction(json_data)
-        climate = conn.execute('SELECT * FROM climate').fetchall()
-        # print(json_data)
-        conn.close()
+    # if topic not in topics:
+    #     to_next_broker(json_data)
+    # else:
+    #     subscriberfunction(json_data)
+    #     climate = conn.execute('SELECT * FROM climate').fetchall()
+    #     # print(json_data)
+    #     conn.close()
+
+    subscriberfunction(json_data)
     # return json_data.text
 
 @app.route('/print', methods=('GET', 'POST'))
@@ -80,14 +101,18 @@ def susbscriber_view():
     json_data = flask.request.json
     id = json_data["ID"]
     # ID = str(ID)
-    app.logger.info(id)
-    conn = get_db_connection()
-    # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
-    climate = conn.execute(
-        "SELECT * FROM climate WHERE TYPE =?", (id,)).fetchall()
+    # app.logger.info(id)
+    # conn = get_db_connection()
+    # # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
+    # climate = conn.execute(
+    #     "SELECT * FROM climate WHERE TYPE =?", (id,)).fetchall()
 
-    app.logger.info(json.dumps([tuple(row) for row in climate]))
-    return json.dumps([tuple(row) for row in climate])
+    # app.logger.info(json.dumps([tuple(row) for row in climate]))
+    newlist = []
+    for msg in subdict[id]:
+        newlist.append(msg.value)
+    #return those messages which are filtered
+    return json.dumps(newlist)
 
 
 def publisherfunction(json_data):
@@ -109,13 +134,20 @@ def publisherfunction(json_data):
     if advertise == 'Advertise':
         logger.info("advertise")
         urlnew = urlnew + 'UPCOMING phenomenon: ' + phen + ' in the period: ' + period
-        conn = get_db_connection()
-        sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        conn.execute(sql, (urlnew, country, phen))
-        conn.commit()
+        # conn = get_db_connection()
+        # sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        # conn.execute(sql, (urlnew, country, phen))
+        # conn.commit()
 
 
-        conn.close()
+        # conn.close()
+        producer.send("USA/tas", value=urlnew)
+        producer.send("MEX/tas", value=urlnew)
+        producer.send("CAN/tas", value=urlnew)
+
+
+
+
     #publish function
     elif advertise == 'Publish':
         logger.info("publish")
@@ -123,11 +155,13 @@ def publisherfunction(json_data):
         end = period.split('-')[1]
         urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + \
             phenomenon + '/' + start + '/' + end + '/' + 'USA'
-        conn = get_db_connection()
-        sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
-        logger.info(conn.execute(sql, (urlnew, country, phen)))
-        logger.info(conn.commit())
-        conn.close()
+        # conn = get_db_connection()
+        # sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
+        # logger.info(conn.execute(sql, (urlnew, country, phen)))
+        # logger.info(conn.commit())
+        # conn.close()
+        topic = country + '/' + 'tas'
+        producer.send(topic,value=urlnew)
 
 
 def subscriberfunction(json_data):
@@ -141,12 +175,15 @@ def subscriberfunction(json_data):
     # subscribe_id = 0, Subscribe
     elif subscribe == 'Subscribe':
         default_msg = "Nothing available at this time"
-        conn = get_db_connection()
-        conn.execute("INSERT INTO climate (TYPE, ISO3,PHEN,SUBSCRIBE,default_msg) VALUES (?,?, ?, ?, ?)",
-                     (id, country, phen, subscribe, default_msg)
-                     )
-        conn.commit()
-        conn.close()
+        # conn = get_db_connection()
+        # conn.execute("INSERT INTO climate (TYPE, ISO3,PHEN,SUBSCRIBE,default_msg) VALUES (?,?, ?, ?, ?)",
+        #              (id, country, phen, subscribe, default_msg)
+        #              )
+        # conn.commit()
+        # conn.close()
+        topic = country + '/' + phen
+        subdict[id].subscribe([topic])
+
     #unsubscribe function
      # subscribe_id = 1, Unsubscribe
     elif subscribe == 'Unsubscribe':
@@ -158,14 +195,14 @@ def subscriberfunction(json_data):
         conn.close()
 
 
-def to_next_broker(data):
-    #send message to broker2
-    url = "http://broker2:5000/sub"
-    # data = {'ID': ID, 'PHEN': PHEN,
-    #         'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
-    app.logger.info(data)
-    headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    r = requests.post(url, data=json.dumps(data), headers=headers)
+# def to_next_broker(data):
+#     #send message to broker2
+#     url = "http://broker2:5000/sub"
+#     # data = {'ID': ID, 'PHEN': PHEN,
+#     #         'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
+#     app.logger.info(data)
+#     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+#     r = requests.post(url, data=json.dumps(data), headers=headers)
 
 # def from_last_broker(data):
     # display_sub(data)
