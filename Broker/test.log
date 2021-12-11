@@ -1,0 +1,835 @@
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 948-255-765
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:20:52] "[33mGET / HTTP/1.1[0m" 404 -
+127.0.0.1 - - [10/Dec/2021 18:20:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [10/Dec/2021 18:21:13] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 18:22:29] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 18:23:21] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 18:23:29] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:26:19] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:27:00] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:28:29] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:31:33] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:37:19] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:44:07] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+publish
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 18:57:10] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+publish
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:10:04] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+publish
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:16:54] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:20:16] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+publish
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:24:02] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:24:05] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:24:34] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:29:03] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:30:07] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:30:09] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:37:06] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:37:13] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:38:23] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:39:34] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:43:17] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:43:42] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:44:21] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:45:28] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:45:59] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:46:13] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:46:14] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:46:19] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:51:22] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:51:50] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:52:11] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:53:36] "[35m[1mPOST /pub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 19:54:31] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:54:54] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:55:39] "POST /pub HTTP/1.1" 200 -
+127.0.0.1 - - [10/Dec/2021 19:55:59] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 19:56:03] "POST /sub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:58:47] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 19:59:43] "POST /pub HTTP/1.1" 200 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 20:10:48] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:11:34] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:11:59] "POST /pub HTTP/1.1" 200 -
+127.0.0.1 - - [10/Dec/2021 20:12:17] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 20:12:26] "POST /sub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 20:17:22] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:17:40] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:18:14] "POST /pub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 20:19:33] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:19:49] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:20:19] "POST /pub HTTP/1.1" 200 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+127.0.0.1 - - [10/Dec/2021 20:23:22] "POST /sub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:31:58] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:32:47] "POST /pub HTTP/1.1" 200 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:34:02] "POST /pub HTTP/1.1" 200 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [10/Dec/2021 20:38:03] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:38:20] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:40:10] "POST /pub HTTP/1.1" 200 -
+127.0.0.1 - - [10/Dec/2021 20:40:36] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:50:34] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:51:02] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 20:51:20] "POST /pub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+temperature
+127.0.0.1 - - [10/Dec/2021 21:42:22] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 21:42:37] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 21:42:39] "POST /pub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [10/Dec/2021 21:43:12] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 21:43:38] "POST /pub HTTP/1.1" 200 -
+temperature
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 21:45:14] "POST /pub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+temperature
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 22:54:57] "POST /pub HTTP/1.1" 200 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+temperature
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 22:56:53] "POST /pub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+temperature
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [10/Dec/2021 23:14:42] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [10/Dec/2021 23:15:05] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 23:15:22] "POST /pub HTTP/1.1" 200 -
+127.0.0.1 - - [10/Dec/2021 23:15:50] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+127.0.0.1 - - [10/Dec/2021 23:16:00] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [10/Dec/2021 23:16:43] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [10/Dec/2021 23:17:05] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [10/Dec/2021 23:17:18] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 23:17:42] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [10/Dec/2021 23:18:11] "POST /pub HTTP/1.1" 200 -

@@ -8,9 +8,10 @@ producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          dumps(x).encode('utf-8'))
                          
 
-for e in range(100):
-    data = {'number' : e}
-    producer.send('a', value=data)
-    sleep(5)
+
+data = 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/tas/1960/1979/USA'
+producer.send('a', value=data)
+sleep(2)
+print("lolz")
 
 

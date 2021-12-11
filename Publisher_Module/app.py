@@ -36,7 +36,7 @@ def publisher1():
         PUB_SUB_ID = "PUB"
         subscribe_id = "0"
         #content = request.form['content']
-        url = "http://broker:5000/pub"
+        url = "http://localhost:5003/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID, "subscribe_id": subscribe_id}
         app.logger.info(data)
@@ -58,7 +58,7 @@ def publisher2():
         PUB_SUB_ID = "PUB"
         subscribe_id = "0"
         #content = request.form['content']
-        url = "http://broker:5000/pub"
+        url = "http://localhost:5003/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID, "subscribe_id": subscribe_id}
         app.logger.info(data)
@@ -106,7 +106,7 @@ def publisher3():
         PUB_SUB_ID = "PUB"
         subscribe_id = "0"
         #content = request.form['content']
-        url = "http://broker:5000/pub"
+        url = "http://broker:5003/pub"
         data = {'PERIOD': PERIOD, 'PHEN': PHEN,
                 'ADVERTISE': ADVERTISE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID, "subscribe_id": subscribe_id}
         app.logger.info(data)
@@ -314,4 +314,4 @@ def publisher12():
 
 
 if __name__ == "__main__":
-    app.run(host ='0.0.0.0', debug = True)
+    app.run(host ='0.0.0.0', port=5001, debug = True)
