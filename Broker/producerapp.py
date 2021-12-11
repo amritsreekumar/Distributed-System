@@ -17,9 +17,18 @@ import requests
 topics = ["USA_tas", "CAN_tas", "MEX_tas"]
 subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8" ,"subscriber9", "subscriber10"]
 
+#make 3
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          value_serializer=lambda x: 
                          dumps(x).encode('utf-8'))
+
+# producer2 = KafkaProducer(bootstrap_servers=['localhost:9094'],
+#                          value_serializer=lambda x: 
+#                          dumps(x).encode('utf-8'))
+
+# producer3 = KafkaProducer(bootstrap_servers=['localhost:9095'],
+#                          value_serializer=lambda x: 
+#                          dumps(x).encode('utf-8'))
 
 # subdict = {}
 # for i in subscribers:
@@ -167,8 +176,15 @@ def publisherfunction(json_data):
         topic = country + '_' + 'tas'
         print(topic)
         print(urlnew)
-        producer.send(topic,value=urlnew)
-        sleep(5)
+        if country == 'USA':
+            producer.send(topic,value=urlnew)
+            sleep(5)
+        elif country == 'MEX':
+            producer.send(topic,value=urlnew)
+            sleep(5)
+        elif country == "CAN":
+            producer.send(topic,value=urlnew)
+            sleep(5)
         #print(subdict['subscriber1'])
 
 

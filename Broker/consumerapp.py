@@ -17,6 +17,7 @@ import requests
 topics = ["USA_tas", "CAN_tas", "MEX_tas"]
 subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8", "subscriber9", "subscriber10"]
 
+
 # producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
 #                          value_serializer=lambda x: 
 #                          dumps(x).encode('utf-8'))
@@ -30,6 +31,10 @@ for i in subscribers:
      enable_auto_commit=True,
      group_id=i,
      value_deserializer=lambda x: loads(x.decode('utf-8')))
+
+print("Cleaning up")
+for i in subscribers:
+    subdict[i].unsubscribe()
 
 app = Flask(__name__)
 
@@ -197,7 +202,15 @@ def subscriberfunction(json_data):
         # conn.commit()
         # conn.close()
         topic = country + '_' + phenomenon
-        subdict[id].subscribe([topic])
+        
+        #print(subdict[id].topics())
+        oldtopics = subdict[id].topics()
+        newtopics =[]
+        newtopics.append(topic)
+        for i in oldtopics:
+            if i in topics:
+                newtopics.append(i)
+        subdict[id].subscribe(newtopics)
         print(id)
         # for msg in subdict[id]:
         #      print(msg.value)

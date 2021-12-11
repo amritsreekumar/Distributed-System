@@ -36,6 +36,9 @@ for i in subscribers:
      group_id='my-group',
      value_deserializer=lambda x: loads(x.decode('utf-8')))
 
-subdict['subscriber1'].subscribe('USA_tas')
+subdict['subscriber1'].subscribe(['Ass_tas'])
+subdict['subscriber1'].subscribe(['USA_tas'])
+subdict['subscriber1'].subscribe('MEX_tas')
+print(subdict['subscriber1'].topics())
 for msg in subdict['subscriber1']:
     print(msg.value)
