@@ -15,7 +15,7 @@ import requests
 
 
 topics = ["USA_tas", "CAN_tas", "MEX_tas"]
-subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8" "subscriber9", "subscriber10"]
+subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8" ,"subscriber9", "subscriber10"]
 
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          value_serializer=lambda x: 
@@ -158,7 +158,7 @@ def publisherfunction(json_data):
         start = period.split('-')[0]
         end = period.split('-')[1]
         urlnew = urlnew + 'http://climatedataapi.worldbank.org/climateweb/rest/v1/country/mavg/' + \
-            phenomenon + '/' + start + '/' + end + '/' + 'USA'
+            phenomenon + '/' + start + '/' + end + '/' + country
         # conn = get_db_connection()
         # sql = "UPDATE climate SET default_msg = ? WHERE ((ISO3 = ?) OR (ISO3 = 'ALL')) AND ((PHEN = ?) OR (PHEN = 'Both'))"
         # logger.info(conn.execute(sql, (urlnew, country, phen)))
@@ -166,7 +166,7 @@ def publisherfunction(json_data):
         # conn.close()
         topic = country + '_' + 'tas'
         print(topic)
-        #print(urlnew)
+        print(urlnew)
         producer.send(topic,value=urlnew)
         sleep(5)
         #print(subdict['subscriber1'])

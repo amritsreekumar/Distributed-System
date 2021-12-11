@@ -68,7 +68,7 @@ def subscriber3():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -88,7 +88,7 @@ def subscriber4():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -108,7 +108,7 @@ def subscriber5():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -128,7 +128,7 @@ def subscriber6():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -148,7 +148,7 @@ def subscriber7():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -168,7 +168,7 @@ def subscriber8():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -188,7 +188,7 @@ def subscriber9():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -208,7 +208,7 @@ def subscriber10():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -228,7 +228,7 @@ def subscriber11():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -248,7 +248,7 @@ def subscriber12():
         SUBSCRIBE = request.form['SUBSCRIBE']
         PUB_SUB_ID = "SUB"
 
-        url = "http://broker:5000/sub"
+        url = "http://localhost:5004/sub"
         data = {'ID': ID, 'PHEN': PHEN,
                 'SUBSCRIBE': SUBSCRIBE, 'COUNTRY': COUNTRY, "PUB_SUB_ID": PUB_SUB_ID}
         app.logger.info(data)
@@ -298,7 +298,7 @@ def displaysubscriber3():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5003/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber3"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -315,7 +315,7 @@ def displaysubscriber4():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber4"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -332,7 +332,7 @@ def displaysubscriber5():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber5"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -349,7 +349,7 @@ def displaysubscriber6():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber6"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -366,7 +366,7 @@ def displaysubscriber7():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber7"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -383,7 +383,7 @@ def displaysubscriber8():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber8"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -400,7 +400,7 @@ def displaysubscriber9():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber9"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -417,7 +417,7 @@ def displaysubscriber10():
     # conn = get_db_connection()
     # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
     # conn.close()
-    url = "http://broker:5000/susbscriber_view"
+    url = "http://localhost:5004/susbscriber_view"
     data = {'ID': "subscriber10"}
     app.logger.info(data)
     headers = {'Content-type': 'application/json',
@@ -429,38 +429,6 @@ def displaysubscriber10():
     return render_template('displaysubscriber10.html', jsonfile=climate.json())
 
 
-@app.route('/displaysubscriber11')
-def displaysubscriber11():
-    # conn = get_db_connection()
-    # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
-    # conn.close()
-    url = "http://broker:5000/susbscriber_view"
-    data = {'ID': "subscriber11"}
-    app.logger.info(data)
-    headers = {'Content-type': 'application/json',
-               'Accept': 'application/json'}
-    climate = requests.post(url, data=json.dumps(data), headers=headers)
-    app.logger.info(type(climate))
-    app.logger.info(climate.json())
-    # return render_template('displaysubscriber1.html', climate=climate)
-    return render_template('displaysubscriber11.html', jsonfile=climate.json())
-
-
-@app.route('/displaysubscriber12')
-def displaysubscriber12():
-    # conn = get_db_connection()
-    # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
-    # conn.close()
-    url = "http://broker:5003/susbscriber_view"
-    data = {'ID': "subscriber12"}
-    app.logger.info(data)
-    headers = {'Content-type': 'application/json',
-               'Accept': 'application/json'}
-    climate = requests.post(url, data=json.dumps(data), headers=headers)
-    app.logger.info(type(climate))
-    app.logger.info(climate.json())
-    # return render_template('displaysubscriber1.html', climate=climate)
-    return render_template('displaysubscriber12.html', jsonfile=climate.json())
 
 
 

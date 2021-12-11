@@ -833,3 +833,209 @@ publish
 temperature
 publish
 127.0.0.1 - - [10/Dec/2021 23:18:11] "POST /pub HTTP/1.1" 200 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [11/Dec/2021 00:55:59] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 00:56:15] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 00:56:41] "POST /pub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 00:59:55] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:02:16] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:02:32] "POST /pub HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2021 01:02:33] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [11/Dec/2021 01:02:58] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:03:13] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:04:08] "POST /pub HTTP/1.1" 200 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:06:27] "POST /pub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:06:59] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:07:18] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:07:42] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:07:55] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:08:14] "POST /pub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:08:53] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:08:59] "[35m[1mPOST /sub HTTP/1.1[0m" 500 -
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/producerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Detected change in '/Users/amritsreekumar/Desktop/Distributed-System/Broker/consumerapp.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [11/Dec/2021 01:11:03] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:11:18] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:11:26] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:11:48] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:12:09] "POST /pub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:12:37] "POST /sub HTTP/1.1" 200 -
+127.0.0.1 - - [11/Dec/2021 01:12:43] "[35m[1mPOST /susbscriber_view HTTP/1.1[0m" 500 -
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5004/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.1.207:5003/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-361-064
+temperature
+127.0.0.1 - - [11/Dec/2021 01:14:47] "POST /sub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:15:14] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:15:41] "POST /pub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:16:02] "POST /pub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:16:17] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:16:53] "POST /pub HTTP/1.1" 200 -
+temperature
+127.0.0.1 - - [11/Dec/2021 01:17:11] "POST /sub HTTP/1.1" 200 -
+temperature
+publish
+127.0.0.1 - - [11/Dec/2021 01:17:41] "POST /pub HTTP/1.1" 200 -

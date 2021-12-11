@@ -15,7 +15,7 @@ import requests
 
 
 topics = ["USA_tas", "CAN_tas", "MEX_tas"]
-subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8" "subscriber9", "subscriber10"]
+subscribers = ["subscriber1", "subscriber2","subscriber3","subscriber4","subscriber5","subscriber6","subscriber7","subscriber8", "subscriber9", "subscriber10"]
 
 # producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
 #                          value_serializer=lambda x: 
@@ -102,7 +102,7 @@ def sub():
 def susbscriber_view():
     json_data = flask.request.json
     id = json_data["ID"]
-    print(id)
+    #print(id)
     # ID = str(ID)
     # app.logger.info(id)
     # conn = get_db_connection()
@@ -113,7 +113,7 @@ def susbscriber_view():
     # app.logger.info(json.dumps([tuple(row) for row in climate]))
     newlist = []
     for msg in subdict[id]:
-        print(msg.value)
+        print(id + " " + msg.value)
         newlist.append(msg.value)
     #return those messages which are filtered
     return json.dumps(newlist)
