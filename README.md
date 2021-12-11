@@ -66,3 +66,9 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --fr
 
 
 Kafka-server-start /usr/local/etc/Kafka/server.properties
+
+deleting topics:
+kafka-topics  --bootstrap-server localhost:9092 --topic USA_tas --delete
+
+listing:
+kafka-topics  --bootstrap-server localhost:9092 --list

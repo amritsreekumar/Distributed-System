@@ -8,9 +8,15 @@ producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          dumps(x).encode('utf-8'))
                          
 
-for e in range(100):
-    data = {'number' : e}
-    producer.send('a', value=data)
-    sleep(5)
+
+data = 'USA'
+data2 = 'MEX'
+for i in range(100):
+    producer.send('USA_tas', value=data)
+    sleep(2)
+    producer.send('MEX_tas', value=data2)
+    sleep(2)
+print("lolz")
+
 
 
