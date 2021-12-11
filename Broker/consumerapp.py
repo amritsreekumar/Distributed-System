@@ -204,14 +204,20 @@ def subscriberfunction(json_data):
         topic = country + '_' + phenomenon
         
         #print(subdict[id].topics())
-        oldtopics = subdict[id].topics()
+        oldtopics = subdict[id].subscription()
         newtopics =[]
         newtopics.append(topic)
-        for i in oldtopics:
-            if i in topics:
-                newtopics.append(i)
+        if oldtopics != None:
+            for i in oldtopics:
+                if i in topics:
+                    newtopics.append(i)
         subdict[id].subscribe(newtopics)
         print(id)
+
+
+        # subdict[id].subscribe(topic)
+        # print(subdict[id].subscription())
+
         # for msg in subdict[id]:
         #      print(msg.value)
 

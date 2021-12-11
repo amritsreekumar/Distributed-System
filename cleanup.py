@@ -13,6 +13,7 @@ for i in subscribers:
      group_id=i,
      value_deserializer=lambda x: loads(x.decode('utf-8')))
 
-for i in subscribers:
-    print(subdict[i].topics())
+
+#subdict[subscribers[0]].subscribe('USA_tas')
+print(subdict['subscriber1'].subscription())
     #subdict[i].unsubscribe()
