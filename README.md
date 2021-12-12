@@ -8,26 +8,31 @@ This search query is also stored in the persistent database that does not get lo
 To run the application:
 
 In order for the brokers to share the same db, we have made use of docker volume and its, attached with just the brokers.
-**Docker Volume**
-    docker volume create weather
-
-**Copy the broker db file to volume**
-    cd Broker/
-    docker run -v weather:/data --name helper busybox true
-    docker cp . helper:/data
-    docker rm helper
-
-To start the dockers, we have written a docker compose file, so that the 3 brokers and publisher and subscriber dockers starts with just one line of code
 
 
 To build the docker
 
-    cd ..
     docker-compose build
 
 To compose the docker
 
-    docker-compose up 
+    docker-compose -f docker-compose.yml up -d
+
+To see the logs
+  
+    docker-compose logs -f 
+
+To see the kafka docker
+
+    docker exec -it kafka /bin/bash
+    cd opt/kafka/bin
+    ./kafka-topics.sh --bootstrap-server kafka:9092 --create --topic USA --partitions 2 --replication-factor 4
+    ./kafka-topics.sh --bootstrap-server kafka:9092 --create --topic MEX --partitions 1 --replication-factor 4
+    ./kafka-topics.sh --bootstrap-server kafka:9092 --create --topic CAN --partitions 1 --replication-factor 4
+
+List the topics
+
+    ./kafka-topics.sh --bootstrap-server kafka:9092 --list
 
 Example links:
         
@@ -42,33 +47,3 @@ Hit submit
 
 Scroll down to find the previously queried searches and it will have the searches stored in the database along with the published data as per the subscription. 
 
-
-pip3 install kafka-python
-brew install kafka
-brew install zookeeper
-
-To start zookeeper now and restart at login:
-  brew services start zookeeper
-Or, if you don't want/need a background service you can just run:
-  zkServer start
-
-To restart kafka after an upgrade:
-  brew services restart kafka
-Or, if you don't want/need a background service you can just run:
-  /opt/homebrew/opt/kafka/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
-
-
-kafka-topics --create --topic test-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4 
-
-kafka-console-producer --broker-list localhost:9092 --topic test-topic
-
-kafka-console-consumer --bootstrap-server localhost:9092 --topic test-topic --from-beginning
-
-
-Kafka-server-start /usr/local/etc/Kafka/server.properties
-
-deleting topics:
-kafka-topics  --bootstrap-server localhost:9092 --topic USA_tas --delete
-
-listing:
-kafka-topics  --bootstrap-server localhost:9092 --list

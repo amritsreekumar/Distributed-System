@@ -1,6 +1,7 @@
 import json
 from flask import Flask, render_template, request, url_for, flash, redirect
 import flask
+from kafka.producer import kafka
 from werkzeug.exceptions import abort
 from time import sleep
 from json import dumps
@@ -26,8 +27,9 @@ subdict = {}
 for i in subscribers:
     print(i)
     subdict[i] = KafkaConsumer(
-     bootstrap_servers=['kafka:9092'],
-     api_version=(2, 1, 2),
+     bootstrap_servers=['kafka:9092','kafka2:9091','kafka3:9090'],
+    #  api_version=(2, 1, 2),
+     api_version = (5,1,2),
      auto_offset_reset='earliest',
      enable_auto_commit=True,
      group_id=i,
@@ -109,20 +111,11 @@ def subscriber_view():
     app.logger.info("INSIDE subscriber_view")
     json_data = flask.request.json
     id = json_data["ID"]
-    #print(id)
-    # ID = str(ID)
-    # app.logger.info(id)
-    # conn = get_db_connection()
-    # # climate = conn.execute('SELECT * FROM climate WHERE TYPE = "subscriber1"').fetchall()
-    # climate = conn.execute(
-    #     "SELECT * FROM climate WHERE TYPE =?", (id,)).fetchall()
-
-    # app.logger.info(json.dumps([tuple(row) for row in climate]))
-    app.logger.info("The Id",id)
-    # app.logger.info("id + " ")
+    app.logger.info("the id:",id)
+    # app.logger.info(id + " ")
     newlist = []
     for msg in subdict[id]:
-        app.logger.info("The message value"+ id + " " + msg.value)
+        app.logger.info(id + " " + msg.value)
         newlist.append(msg.value)
     #return those messages which are filtered
     return json.dumps(newlist)

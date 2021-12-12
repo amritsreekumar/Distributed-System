@@ -26,7 +26,7 @@ subdict = {}
 for i in subscribers:
     print(i)
     subdict[i] = KafkaConsumer(
-     bootstrap_servers=['kafka:9092'],
+     bootstrap_servers=['localhost:9092'],
      api_version=(2, 1, 2),
      auto_offset_reset='earliest',
      enable_auto_commit=True,
@@ -104,9 +104,8 @@ def sub():
 #     return render_template('messagereceiver.html', climate=climate)
 
 #To call the display for subscribers
-@app.route('/subscriber_view', methods=('GET', 'POST'))
-def subscriber_view():
-    app.logger.info("INSIDE subscriber_view")
+@app.route('/susbscriber_view', methods=('GET', 'POST'))
+def susbscriber_view():
     json_data = flask.request.json
     id = json_data["ID"]
     #print(id)
@@ -118,11 +117,9 @@ def subscriber_view():
     #     "SELECT * FROM climate WHERE TYPE =?", (id,)).fetchall()
 
     # app.logger.info(json.dumps([tuple(row) for row in climate]))
-    app.logger.info("The Id",id)
-    # app.logger.info("id + " ")
     newlist = []
     for msg in subdict[id]:
-        app.logger.info("The message value"+ id + " " + msg.value)
+        print(id + " " + msg.value)
         newlist.append(msg.value)
     #return those messages which are filtered
     return json.dumps(newlist)
@@ -189,10 +186,10 @@ def subscriberfunction(json_data):
     subscribe = json_data['SUBSCRIBE']
     if phen == 'Temperature':
         phenomenon = 'tas'
-        app.logger.info("temperature")
+        logger.info("temperature")
     else:
         phenomenon = 'pr'
-        app.logger.info("pr")
+        logger.info("pr")
     if not country:
         flash('Country code is required!')
     #subscribe function
@@ -216,7 +213,6 @@ def subscriberfunction(json_data):
                 if i in topics:
                     newtopics.append(i)
         subdict[id].subscribe(newtopics)
-        app.logger.info("id")
         print(id)
 
 
@@ -251,4 +247,4 @@ def subscriberfunction(json_data):
 
 
 if __name__ == "__main__":
-    app.run(host ='0.0.0.0', debug = True)
+    app.run(host ='0.0.0.0', port=5004, debug = True)

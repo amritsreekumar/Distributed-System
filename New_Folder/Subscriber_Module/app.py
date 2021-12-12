@@ -271,12 +271,12 @@ def displaysubscriber1():
     headers = {'Content-type': 'application/json',
                'Accept': 'application/json'}
     climate = requests.post(url, data=json.dumps(data), headers=headers)
-    sleep(20)
-    #app.logger.info("NIKHILLLLL")
+    sleep(10)
+    app.logger.info("NIKHILLLLL")
 
     # return render_template('displaysubscriber1.html', climate=climate)
     # return render_template('displaysubscriber1.html', jsonfile=climate.json())
-    return render_template('displaysubscriber1.html')
+    return render_template('displaysubscriber1.html', jsonfile=climate.json())
 
 
 @app.route('/displaysubscriber2')
